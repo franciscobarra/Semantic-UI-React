@@ -2,9 +2,12 @@ import React, { Component } from 'react'
 import { Grid, Menu, Segment } from 'semantic-ui-react'
 
 export default class MenuExampleTabularOnLeft extends Component {
-  state = { activeItem: 'bio' }
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  
+  constructor(props){
+         super(props);
+         this.state = { activeItem: 'bio' }
+         this.handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+    }
 
   render() {
     const { activeItem } = this.state
